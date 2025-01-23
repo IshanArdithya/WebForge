@@ -1,4 +1,5 @@
 import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
+
 import FeatureSection from "./components/FeatureSection"
 import Footer from "./components/Footer"
 import HeroSection from "./components/HeroSection"

@@ -1,4 +1,5 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+
 import { CheckCircle2 } from "lucide-react"
 import { XCircle } from "lucide-react"
 import { pricingOptions } from "../constants"
@@ -10,18 +11,22 @@ const Pricing = () => {
 
         if (selectedPackage) {
             Swal.fire({
-                title: `Buy ${selectedPackage.title} Plan?`,
-                text: `This plan costs ${selectedPackage.price}/Yearly. Are you sure you want to proceed?`,
+                title: `<h5 style='color:#fffefe'>Buy ${selectedPackage.title} Plan?</h5>`,
+                html: `<p style='color:#727372'>This plan costs ${selectedPackage.price}/Yearly. Are you sure you want to proceed?</p>`,
                 icon: "question",
+                background: '#131213',
                 showCancelButton: true,
+                confirmButtonColor: '#12968a',
                 confirmButtonText: "Yes, Buy!",
-                cancelButtonText: "Cancel"
+                cancelButtonText: "Cancel",
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: "Contact Us",
-                        text: "Please contact us via email!",
-                        icon: "info"
+                        title: "<h5 style='color:#fffefe'>Contact Us</h5>",
+                        html: "<p style='color:#727372'>Please contact us via email!</p>",
+                        icon: "info",
+                        background: '#131213',
+                        confirmButtonColor: '#12968a',
                     })
                 }
             })
